@@ -9,7 +9,6 @@ public class Paddle {
 	private int yPos;
 	private int width;
 	private int xVelo = 2;
-	private int yVelo = 0;
 	//your code here!
 	public Paddle(int x, int y, int w, int h) {
 		this.xPos = x;
@@ -39,7 +38,11 @@ public class Paddle {
 	}
 
 	public void setX(int x) {
-		this.x = xPos;
+		this.xPos = x;
+	}
+
+	public void setVelocity(int x) {
+		this.xVelo = x;
 	}
 
 	public int getY() {
@@ -47,7 +50,7 @@ public class Paddle {
 	}
 
 	public void setY(int y) {
-		this.y = yPos;
+		this.yPos = y;
 	}
 
 	public void move() {
@@ -61,7 +64,7 @@ public class Paddle {
 	//postcondition: the brick is drawn using the color corresponding to its HP value.
 	public void draw(Graphics g) {
 		g.setColor(Color.white);
-           g.fillRect(x, y, width, height);
+           g.fillRect(xPos, yPos, width, height);
 	}
 	
 }

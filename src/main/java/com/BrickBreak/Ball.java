@@ -16,16 +16,8 @@ public class Ball {
 
 	
 	//don't forget you need instance variables:
-	public int getXPos() {
+	public int getXpos() {
 		return xPos;
-	}
-
-	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
 	}
 	public int getVelocity() {
 		return xVelo;
@@ -54,7 +46,7 @@ public class Ball {
 		this.yVelo *= -1;
 	}
 
-	public int getYPos() {
+	public int getYpos() {
 		return yPos;
 	}
 
@@ -78,7 +70,7 @@ public class Ball {
 	//postcondition: the brick is drawn using the color corresponding to its HP value.
 	public void draw(Graphics g) {
 		g.setColor(Color.white);
-           g.fillOval(x, y, radius, radius);
+           g.fillOval(xPos, yPos, radius, radius);
 	}
 	
 }
